@@ -26,13 +26,13 @@ public class InitData implements ApplicationListener<ApplicationReadyEvent> {
     }
 
     private void insertTestData() {
-        Client client1 = newClient("PETRILLO", "Alexandre", LocalDate.of(1983, 1, 3));
+        Client client1 = newClient("Petrillo", "Alexandre", LocalDate.of(1983, 1, 3));
         em.persist(client1);
 
-        Client client2 = newClient("Dupont", "Jérome", LocalDate.of(1990, 1, 22));
+        Client client2 = newClient("Dupont", "Jérôme", LocalDate.of(1990, 1, 22));
         em.persist(client2);
 
-        Client client3 = newClient("D\"oe", "Jo;hn", LocalDate.of(2000, 1, 3));
+        Client client3 = newClient("Doe", "John", LocalDate.of(2000, 1, 3));
         em.persist(client3);
 
         Article a1 = new Article();

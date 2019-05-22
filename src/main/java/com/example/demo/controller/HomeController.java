@@ -19,6 +19,7 @@ public class HomeController {
 
     @Autowired
     private ClientService clientService;
+
     @Autowired
     private FactureService factureService;
 
@@ -26,8 +27,8 @@ public class HomeController {
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView("home");
 
-        List<Client> toto = clientService.findAllClients();
-        modelAndView.addObject("clients", toto);
+        List<Client> clients = clientService.findAllClients();
+        modelAndView.addObject("clients", clients);
 
         List<Facture> factures = factureService.findAllFactures();
         modelAndView.addObject("factures", factures);
