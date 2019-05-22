@@ -14,10 +14,10 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String prenom;
 
-    @Column
+    @Column(nullable = false)
     private String nom;
 
     @Column

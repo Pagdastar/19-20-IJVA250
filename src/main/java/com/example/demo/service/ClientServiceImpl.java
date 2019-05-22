@@ -8,8 +8,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Service
+@Transactional
+public class ClientServiceImpl implements ClientService {
 
-public interface ClientService {
+    @Autowired
+    private ClientRepository clientRepository;
 
-    List<Client> findAllClients();
+    public List<Client> findAllClients() {
+        return clientRepository.findAll();
+    }
 }
